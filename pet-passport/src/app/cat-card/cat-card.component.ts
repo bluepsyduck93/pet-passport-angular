@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cat } from '../interfaces/cat';
+import { CATS } from '../mocks/mock-cats';
 
 @Component({
   selector: 'app-cat-card',
@@ -7,13 +8,12 @@ import { Cat } from '../interfaces/cat';
   styleUrls: ['./cat-card.component.scss']
 })
 export class CatCardComponent implements OnInit {
-
-  cat: Cat = {
-    id: 1,
-    name: 'Suki',
-    toy: 'Fish'
+  cats = CATS
+  selectedCat?: Cat;
+  onSelect(cat: Cat): void {
+    this.selectedCat = cat
+    console.log(this.selectedCat)
   }
-
   constructor() { }
 
   ngOnInit(): void {

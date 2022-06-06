@@ -1,6 +1,12 @@
-<p>{{cat.id}}</p>
-<p>{{cat.name | uppercase}}</p>
-<div>
-    <label for="toy">Toy: </label>
-    <input id="toy" [(ngModel)]="cat.toy" placeholder="toy" />
-</div>
+<h2>Cats</h2>
+<ul *ngFor="let cat of cats">
+    <li>
+        <button type="button" (click)="onSelect(cat)">
+            <h4>{{cat.name | uppercase}}</h4>
+        </button>
+        <div>
+            <label for="toy">Toy: </label>
+            <input id="toy" [(ngModel)]="cat.toy" placeholder="toy" />
+        </div>
+    </li>
+</ul>
