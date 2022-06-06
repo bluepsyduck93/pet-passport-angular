@@ -6,8 +6,4 @@
         </button>
     </li>
 </ul>
-<div *ngIf="selectedCat">
-    <p>{{selectedCat.id}}</p>
-    <label for="toy">Toy: </label>
-    <input id="toy" [(ngModel)]="selectedCat.toy" placeholder="toy" />
-</div>
+<app-cat-detail [cat]="selectedCat"></app-cat-detail>
