@@ -1,12 +1,13 @@
 <h2>Cats</h2>
-<ul *ngFor="let cat of cats">
+<ul class="cats" *ngFor="let cat of cats">
     <li>
-        <button type="button" (click)="onSelect(cat)">
+        <button [class.selected]="cat === selectedCat" (click)="onSelect(cat)" type="button">
             <h4>{{cat.name | uppercase}}</h4>
         </button>
-        <div>
-            <label for="toy">Toy: </label>
-            <input id="toy" [(ngModel)]="cat.toy" placeholder="toy" />
-        </div>
     </li>
 </ul>
+<div *ngIf="selectedCat">
+    <p>{{selectedCat.id}}</p>
+    <label for="toy">Toy: </label>
+    <input id="toy" [(ngModel)]="selectedCat.toy" placeholder="toy" />
+</div>

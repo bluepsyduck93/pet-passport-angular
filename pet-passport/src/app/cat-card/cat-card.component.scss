@@ -1,0 +1,13 @@
+.cats li {
+    list-style-type: none;
+}
+.cats button {
+    background-color: #1976d2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.cats button.selected {
+    background-color: #64aef8;
+    color: white;
+}

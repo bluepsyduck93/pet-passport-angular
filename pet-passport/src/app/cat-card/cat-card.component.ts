@@ -12,7 +12,6 @@ export class CatCardComponent implements OnInit {
   selectedCat?: Cat;
   onSelect(cat: Cat): void {
     this.selectedCat = cat
-    console.log(this.selectedCat)
   }
   constructor() { }
 
