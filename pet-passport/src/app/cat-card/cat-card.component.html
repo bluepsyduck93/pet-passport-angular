@@ -1,9 +1,17 @@
 <h2>Cats</h2>
 <ul class="cats" *ngFor="let cat of cats">
     <li>
-        <button [class.selected]="cat === selectedCat" (click)="onSelect(cat)" type="button">
-            <h4>{{cat.name | uppercase}}</h4>
-        </button>
+        <div>
+            <button [class.selected]="cat === selectedCat" (click)="onSelect(cat)" type="button">
+                <h4>{{cat.name | uppercase}}</h4>
+            </button>
+            <div *ngIf="cat.vaccinated === true">
+                <img src="../../assets/checkmark.svg"/>
+            </div>
+        </div>
+
+
+        <app-cat-detail *ngIf="cat === selectedCat" [cat]="selectedCat"></app-cat-detail>
     </li>
 </ul>
-<app-cat-detail [cat]="selectedCat"></app-cat-detail>
+

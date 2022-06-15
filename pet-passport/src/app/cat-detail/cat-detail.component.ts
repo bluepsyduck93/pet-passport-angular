@@ -6,7 +6,6 @@ import { Cat } from '../interfaces/cat';
   styleUrls: ['./cat-detail.component.scss']
 })
 export class CatDetailComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

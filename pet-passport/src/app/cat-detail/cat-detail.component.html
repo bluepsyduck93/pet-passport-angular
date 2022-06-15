@@ -1,5 +1,5 @@
 <div *ngIf="cat">
-    <p>{{cat.id}}</p>
-    <label for="toy">Toy: </label>
-    <input id="toy" [(ngModel)]="cat.toy" placeholder="toy" />
+    <div *ngFor="let detail of cat.details | keyvalue">
+        <b>{{detail.key.toUpperCase()}} :</b> {{detail.value}}
+    </div>
 </div>

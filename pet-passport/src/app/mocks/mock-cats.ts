@@ -4,21 +4,47 @@ export const CATS: Cat[] = [
     {
         id: 1,
         name: 'Suki',
-        toy: 'Fish'
+        details:{
+            toy: 'Fish',
+            owner: 'Christine',
+            breed: 'Russian Blue Mix',
+            size: 'small',
+        },
+        vaccinated: true
+
     },
     {
         id: 2,
         name: 'Eternity',
-        toy: 'Ball'
+        details: {
+            toy: 'Ball',
+            owner: 'Emily and Ben',
+            breed: 'American Shorthair',
+            size: 'small'
+        },
+        vaccinated: true
+
     },
     {
         id: 3,
         name: 'Willie',
-        toy: 'Laser'
+        details: {
+            toy: 'Laser',
+            owner: 'Terence and Denia',
+            breed: 'American Shorthair',
+            size: 'small'
+        },
+        vaccinated: true
     },
     {
         id: 4,
         name: 'Rosie',
-        toy: 'Mouse'
+        details:{
+            toy: 'Mouse',
+            owner: 'Terence and Denia',
+            breed: 'American Shorthair',
+            size: 'small'
+        },
+        vaccinated: false
     }
 ]
